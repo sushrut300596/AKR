@@ -7,7 +7,7 @@ typedef struct Player {
 } Player;
 
 Player *build = NULL;
-#define T 20
+#define T 10
 
 int max(int *count) {
 	int i;
@@ -38,6 +38,10 @@ int longest(Player *U) {
 			}
 		}
 	}
+	for(i = 0; i < size; i++) {
+		printf("%d\t", count[i]);
+	}
+	printf("\n");
 	return (max(count) - 1);
 }
 
@@ -46,7 +50,7 @@ int main() {
 	
 	for(int i = 0; i < T; i++) {
 		build[i].player = i;
-		build[i].cap = rand() % 10;
+		build[i].cap = rand() % 4;
 		printf("%d\t%d\n", build[i].player, build[i].cap);
 	}
 	printf("\n");
