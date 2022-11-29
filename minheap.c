@@ -126,10 +126,10 @@ void free_minheap(MinHeap* heap) {
 }
 
 int main() {
-    MinHeap *heap = init_minheap(10);
+    MinHeap *heap = init_minheap(1000);
     int i;
-    for(i = 0; i < 10; i++) {
-        insert_minheap(heap, rand() % 10);
+    for(i = 1; i <= 1000; i++) {
+        insert_minheap(heap, i);
     }
 
     // insert_minheap(heap, 40);
